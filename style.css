@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+  background-color: #f5efe6;
+  color: #3e2723;
+}
+
+/* ===== HEADER ===== */
+.header {
+  grid-area: header;
+  background-color: #5d4037;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== NAV BAR ===== */
+.nav {
+  grid-area: nav;
+  background-color: #8d6e63;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  grid-area: main;
+  padding: 30px;
+  text-align: center;
+}
+
+.main-content h2 {
+  margin-bottom: 25px;
+}
+
+/* ===== FLEXBOX COFFEE SECTION ===== */
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flex-item {
+  background-color: #d7b899;
+  padding: 25px;
+  width: 150px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  grid-area: footer;
+  background-color: #5d4037;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 600px) {
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
